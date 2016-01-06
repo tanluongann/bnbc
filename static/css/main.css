@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Thinfont";
+  src: url("../fonts/DistProTh.otf");
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #3E3E3E;
+  background-attachment: fixed;
+  color: #AEAEAE;
+  font-family: Thinfont, Helvetica, sans-serif;
+}
+
+ul, li, ol {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+  padding: 10px;
+}
+
+article {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+nav {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+nav a {
+  display: block;
+  padding: 10px;
+  color: #AEAEAE;
+  font-size: 19px;
+}
+nav a.selected {
+  color: #44B0FF;
+}
+nav a:hover {
+  color: #DFDFDF;
+}
+
+.mounting {
+  opacity: 0.01;
+  height: 0;
+}
+
+.sensitive {
+  transition: all 0.2s ease-in;
+}
+
+.red .sensitive {
+  color: red;
+}
+
+.page {
+  margin-left: 25px;
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 25px);
+  z-index: 4;
+}

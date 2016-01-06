@@ -1,0 +1,88 @@
+@font-face
+    font-family: "Thinfont"
+    src: url('../fonts/DistProTh.otf')
+
+$main-font: Thinfont, Helvetica, sans-serif
+
+$main-bg: url('../img/bg2.jpg')
+$main-color: #AEAEAE
+$main-color-hover: #DFDFDF
+$main-color-selected: #44B0FF
+
+$widget-bg: rgba(250, 250, 250, 1)
+$scenario-bg: rgba(0, 0, 0, 0.5)
+
+$widget-color: #343434
+$widget-width: 255px
+
+html
+    height: 100%
+    width: 100%
+
+body
+    padding: 0
+    margin: 0
+    height: 100%
+    width: 100%
+    background-color: #3E3E3E
+    // background: $main-bg
+    background-attachment: fixed
+    // background-position: center
+    color: $main-color
+    font:
+        family: $main-font
+
+ul, li, ol
+    padding: 0
+    margin: 0
+
+h1, h2, h3, h4, h5
+    font-weight: normal
+    margin: 0
+
+h1
+    padding: 10px
+
+article
+    padding: 0
+    margin: 0
+    position: relative
+
+nav
+    display: inline-block
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    background: rgba(0, 0, 0, 0.5)
+
+    a
+        display: block
+        padding: 10px
+        color: $main-color
+        font-size: 19px
+
+    a.selected
+        color: $main-color-selected
+
+    a:hover
+        color: $main-color-hover
+
+.mounting
+    opacity: 0.01
+    height: 0
+
+.sensitive
+    transition: all .2s ease-in
+
+.red .sensitive
+    color: red
+
+.page
+    margin-left: 25px
+    position: absolute
+    height: 100%
+    width: calc(100% - 25px)
+    z-index: 4
+
+
