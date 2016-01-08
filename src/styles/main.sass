@@ -79,10 +79,107 @@ nav
     color: red
 
 .page
-    margin-left: 25px
-    position: absolute
+    position: relative
     height: 100%
-    width: calc(100% - 25px)
-    z-index: 4
+    // width: 300px
+    overflow: hidden
 
+    .infopanel
+        display: none
+        height: 100%
+        width: 75%
+        position: absolute
+        top: 0
+        left: 0
 
+        .userpanel
+            width: 100%
+            position: relative
+            background: rgba(120, 120, 120, 0.2)
+            height: 0
+            padding-bottom: 66%
+    
+    .contentpanel
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        // left: 75%
+        background: rgba(255, 255, 255, 1)
+        
+        .card
+            margin: 0
+            margin-top: 10px
+            background: #DEDEDE
+
+            header
+            
+                .img
+                    height: 120px
+                    display: block
+                    // background: rgba(0, 0, 0, 0.2)
+                    background-size: cover
+                    background-position: center
+                    background-repeat: no-repeat
+                 
+            section
+                padding: 5px
+                background: #848484
+                color: #F7F7F7
+
+                .date
+                    position: absolute
+                    margin: 10px
+                    margin-top: -110px
+                    text-align: center
+                    border-radius: 3px
+                    border: solid 1px rgba(162, 162, 162, 0.2)
+                    color: #565656
+    
+                    .day
+                        display: block
+                        font-size: 33px
+                        background: white
+                        width: 50px
+                        padding: 5px
+                        border-top-left-radius: 3px
+                        border-top-right-radius: 3px
+                        font-weight: bold
+                    
+                    .month
+                        display: block
+                        font-size: 16px
+                        background: red
+                        border-bottom-left-radius: 3px
+                        border-bottom-right-radius: 3px
+                        width: 50px
+                        padding: 5px
+            
+            footer
+                position: relative
+                
+                button
+                    width: 33.333%
+                    padding: 5px
+                    background: #8CBB00
+                    border: none
+                    border-left: solid 1px rgba(0, 0, 0, 0.1)
+
+                :first-child
+                    border-bottom-left-radius: 3px
+
+                :last-child
+                    border: none
+                    border-bottom-right-radius: 3px
+            
+
+    .socialpanel
+        display: none
+        height: 100%
+        width: 75%
+        position: absolute
+        top: 0
+        // left: 175%
+        background: rgba(155, 25, 125, 1)
+        
+        

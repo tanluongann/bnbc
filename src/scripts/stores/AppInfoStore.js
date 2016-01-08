@@ -25,32 +25,25 @@ class AppInfoStore {
             handleUpdateAppInfo: AppInfoActions.updateAppInfo,
             handleUpdatePartialAppInfo: AppInfoActions.updatePartialAppInfo,
             handleAppInfoFailed: AppInfoActions.appInfoFailed,
-            handleShowDashboardModal: AppInfoActions.showDashboardModal,
             handleChangePage: AppInfoActions.changePage,
+            handleLogUserIn: AppInfoActions.logUserIn,
         });
-    }
-
-    handleShowDashboardModal(pack) {
-        var partialAppInfo = {
-            dashboard: {
-                modal: {
-                    status: "open",
-                    content: pack.content,
-                    model: pack.model,
-                },
-            },
-        }
-        this.appInfo = _.merge(partialAppInfo, this.appInfo);
     }
 
     handleChangePage(pack) {
         var partialAppInfo = { }
-        var tmp =  _.merge(partialAppInfo, this.appInfo);
-        tmp['dashboard']['page'] = pack.page;
+        var tmp = _.merge(partialAppInfo, this.appInfo);
+        tmp['page'] = pack.page;
         this.appInfo = tmp;
     }
 
-
+    handleLogUserIn(pack) {
+        var partialAppInfo = { }
+        var tmp = _.merge(partialAppInfo, this.appInfo);
+        tmp['loggedUser'] = pack.user;
+        this.appInfo = tmp;
+        console.log(this.appInfo);
+    }
 
     handleUpdateAppInfo(appInfo) {
         // Updating all the store's remote calls

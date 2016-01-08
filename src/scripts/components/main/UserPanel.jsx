@@ -24,7 +24,7 @@ var UserPanel = React.createClass({
         var classes = ['userpanel'];
         if (!this.state.mounted) classes.push('mounting');
         return <div className={ classes.join(" ") } >
-            Jeremy
+            { this.props.user.name }
         </div>
     },
 

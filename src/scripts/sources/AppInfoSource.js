@@ -21,14 +21,11 @@ var AppInfoSource = {
 
             // var appInfo = AppInfoActions.updateAppInfo({
             var appInfo = {
-                dashboard: {
-                    modal: {
-                        status: "closed",
-                        content: "",
-                        model: null,
-                    },
-                    page: 'iil0',
-                },
+                page: 'iil0',
+                loggedUser: {
+                    "name": "Jeremy",
+                    "email": "jeremy@gmail.com",
+                }
             // });
             }
             resolve(appInfo);

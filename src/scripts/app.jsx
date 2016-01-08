@@ -4,7 +4,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 React.allComponents = {}
 // Components
-var MenuPanel = require('./components/main/MenuPanel');
+var InfoPanel = require('./components/main/InfoPanel');
 var ContentPanel = require('./components/main/ContentPanel');
 var SocialPanel = require('./components/main/SocialPanel');
 // Actions
@@ -17,7 +17,7 @@ var App = React.createClass({
 
     getInitialState: function() {
         var state = AppInfoStore.getState();
-        state.appInfo.mounted = false;
+        state.mounted = false;
         return state;
     },
 
@@ -40,14 +40,21 @@ var App = React.createClass({
                 "mnb0": 'inactive',
             }
             if (this.state.appInfo.page in pages) pages[this.state.appInfo.page] = 'active'
+
+            var userBlock = null;
+            if (this.state.appInfo.loggedUser) {
+                userBlock = <InfoPanel loggedUser={ this.state.appInfo.loggedUser } />
+            }
+            else {
+                userBlock = <div className="infopanel">Not logged!!</div>
+            }
+            
             return (
-                <div>
-                    <article className="page">
-                        <MenuPanel />
-                        <ContentPanel />
-                        <SocialPanel />
-                    </article>
-                </div>
+                <article className="page">
+                    { userBlock }
+                    <ContentPanel />
+                    <SocialPanel />
+                </article>
             );
         }
         else {
@@ -60,11 +67,16 @@ var App = React.createClass({
 React.allComponents['App'] = App;
 module.exports = App;
 
-// AppInfoActions.fetchAppInfo();
+AppInfoActions.fetchAppInfo();
+
+AppInfoActions.logUserIn({
+    "name": "Jeremy",
+    "email": "tan@tan.com",
+});
+
 // WidgetActions.fetchWidgets();
 // InterfaceTypeActions.fetchInterfaceTypes();
 // InterfaceInstanceActions.fetchInterfaceInstances();
 // ScenarioTypeActions.fetchScenarioTypes();
 
 ReactDOM.render(<App key="app" />, document.getElementById('app-content'));
-

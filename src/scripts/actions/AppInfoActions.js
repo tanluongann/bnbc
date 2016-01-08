@@ -45,16 +45,16 @@ class AppInfoActions {
 	// Triggers
 	// -------------------------
 
-	showDashboardModal(contentType, model) {
+	changePage(page) {
 		return (dispatch) => {
-			var pack = { "content": contentType, "model": model}
+			var pack = { "page": page }
 			dispatch(pack);
 		}
     }
 
-	changePage(page) {
+	logUserIn(user) {
 		return (dispatch) => {
-			var pack = { "page": page }
+			var pack = { "user": user }
 			dispatch(pack);
 		}
     }
