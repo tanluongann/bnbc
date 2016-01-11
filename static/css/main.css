@@ -12,7 +12,7 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color: #3E3E3E;
+  background-color: #E8E8E6;
   background-attachment: fixed;
   color: #AEAEAE;
   font-family: Thinfont, Helvetica, sans-serif;
@@ -96,15 +96,17 @@ nav a:hover {
   width: 100%;
   position: absolute;
   top: 0;
-  background: url("../img/bg3.jpg");
+  background: #E8E8E6;
   background-attachment: fixed;
   background-repeat: repeat;
 }
 .page .contentpanel .card {
-  margin: 20px;
+  margin: 10px;
+  border: 1px solid #DCDCDC;
+  border-radius: 3px;
 }
 .page .contentpanel .card header .img {
-  height: 130px;
+  height: 170px;
   display: block;
   background-size: cover;
   background-position: center;
@@ -149,13 +151,14 @@ nav a:hover {
 }
 .page .contentpanel .card section .location, .page .contentpanel .card section .duration {
   padding: 10px;
+  display: block;
 }
 .page .contentpanel .card footer {
   position: relative;
-  border-top: solid 1px rgba(0, 0, 0, 0.1);
-  background: #EFEFEF;
+  border-top: solid 1px rgba(0, 0, 0, 0.05);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
+  background: #F9F9F9;
   first-child-border-bottom-left-radius: 3px;
   last-child-border: none;
   last-child-border-bottom-right-radius: 3px;
@@ -165,6 +168,7 @@ nav a:hover {
   padding: 10px;
   border: none;
   color: #888888;
+  background: none;
 }
 .page .socialpanel {
   display: none;
