@@ -24,9 +24,16 @@ var JoinEventCard = React.createClass({
         var classes = ['card', 'join', 'event'];
         if (!this.state.mounted) classes.push('mounting');
         
+        var style = {
+            "background": "url(/static/img/events/"+this.props.event.icon+")",
+        }
+        
         return <article className={ classes.join(" ") } >
-            <span className="title">Join the event <em>{ this.props.event.name }</em></span>
-            <span className="date">{ this.props.event.date }</span>
+            <span className="icon" style={ style } ></span>
+            <span className="content">
+                <span className="title">Join the event <em>{ this.props.event.name }</em></span>
+                <span className="date">{ this.props.event.date }</span>
+            </span>
         </article>
     },
 

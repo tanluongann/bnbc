@@ -57,9 +57,11 @@ var ContentPanel = React.createClass({
         var communities = [
             {
                 "name": "The Maglev lovers",
+                "icon": "community-0.jpg",
             },    
             {
                 "name": "Shanghai gastronomy",
+                "icon": "community-1.jpg",
             },    
         ]
         
@@ -67,13 +69,15 @@ var ContentPanel = React.createClass({
             {
                 "title": "Hurricane alert in Shanghai",
                 "date": "Tomorrow 08:00 am",
+                "icon": "alert-0.jpg",
             },
         ];
         
         var events = [
             {
                 "name": "Hiking in Anji forest",
-                "date": "Friday Jan 12th"
+                "date": "Friday Jan 12th",
+                "icon": "event-0.jpg",
             }    
         ];
         

@@ -24,9 +24,16 @@ var PrepareTripCard = React.createClass({
         var classes = ['card', 'prepare-trip'];
         if (!this.state.mounted) classes.push('mounting');
         
+        var style = {
+            "background": "url(/static/img/prepare.jpg)",
+        }
+        
         return <article className={ classes.join(" ") } >
-            <span className="title">Prepare trip to <em>{ this.props.booking.place.name }</em></span>
-            <span className="date">{ this.props.booking.date }</span>
+            <span className="icon" style={ style } ></span>
+            <span className="content">
+                <span className="title">Prepare trip to <em>{ this.props.booking.place.name }</em></span>
+                <span className="date">{ this.props.booking.date }</span>
+            </span>
         </article>
     },
 

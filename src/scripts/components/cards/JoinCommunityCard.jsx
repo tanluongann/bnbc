@@ -24,8 +24,15 @@ var JoinCommunityCard = React.createClass({
         var classes = ['card', 'join', 'community'];
         if (!this.state.mounted) classes.push('mounting');
         
+        var style = {
+            "background": "url(/static/img/communities/"+this.props.community.icon+")",
+        }
+        
         return <article className={ classes.join(" ") } >
-            <span className="title">Join the community <em>{ this.props.community.name }</em></span>
+            <span className="icon" style={ style } ></span>
+            <span className="content">
+                <span className="title">Join the community <em>{ this.props.community.name }</em></span>
+            </span>
         </article>
     },
 

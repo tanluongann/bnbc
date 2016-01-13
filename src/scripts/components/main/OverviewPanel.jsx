@@ -53,11 +53,24 @@ var OverviewPanel = React.createClass({
         var classes = ['overviewpanel'];
         if (!this.state.mounted) classes.push('mounting');
         return <div className={ classes.join(" ") } >
-            <div className="location current">
-                <span className="city">Paris</span>
-                <span className="time">18:30</span>
-                <span className="weather">Rainy</span>
+
+            <div className="locations">
+                <div className="location current">
+                    <span className="city">Paris</span>
+                    <span className="time">18:30</span>
+                    <span className="weather">Rainy</span>
+                </div>
+                <div className="location next">
+                    <span className="city">Paris</span>
+                    <span className="time">18:30</span>
+                    <span className="weather">Rainy</span>
+                </div>
             </div>
+
+            <div className="user">
+                <span className="name">Jeremy Tan</span>
+            </div>
+
         </div>
     },
 
