@@ -4,7 +4,12 @@ var React = require('react');
 var _ = require('lodash');
 var d = require('datejs');
 
-var BookingCard = require('../cards/BookingCard');
+var OverviewPanel = require('./OverviewPanel');
+
+var PrepareTripCard = require('../cards/PrepareTripCard');
+var JoinCommunityCard = require('../cards/JoinCommunityCard');
+var LocalAlertCard = require('../cards/LocalAlertCard');
+var JoinEventCard = require('../cards/JoinEventCard');
 
 var ContentPanel = React.createClass({
 
@@ -26,7 +31,7 @@ var ContentPanel = React.createClass({
         
         var bookings = [
             {
-                "date": 151232134,
+                "date": "Tomorrow",
                 "place": {
                     "name": "Longyang guangchang",
                     "address": "1088 Longyang Road, blabla",
@@ -37,7 +42,7 @@ var ContentPanel = React.createClass({
                 "duration": 3,
             },
             {
-                "date": 151232134,
+                "date": "Next Thursday",
                 "place": {
                     "name": "Parimonami",
                     "address": "37 rue du bourg, blabla",
@@ -46,14 +51,41 @@ var ContentPanel = React.createClass({
                     "photo": 2,
                 },
                 "duration": 7,
-            }
+            },
+        ];
+        
+        var communities = [
+            {
+                "name": "The Maglev lovers",
+            },    
+            {
+                "name": "Shanghai gastronomy",
+            },    
+        ]
+        
+        var alerts = [
+            {
+                "title": "Hurricane alert in Shanghai",
+                "date": "Tomorrow 08:00 am",
+            },
+        ];
+        
+        var events = [
+            {
+                "name": "Hiking in Anji forest",
+                "date": "Friday Jan 12th"
+            }    
         ];
         
         var classes = ['contentpanel'];
         if (!this.state.mounted) classes.push('mounting');
         return <div className={ classes.join(" ") } >
-            <BookingCard key="b1" booking={ bookings[0] } />
-            <BookingCard key="b2" booking={ bookings[1] } />
+            <OverviewPanel key="op1" />
+            <PrepareTripCard key="ptc1" booking={ bookings[0] } />
+            <JoinCommunityCard key="jcc2" community={ communities[0] } />
+            <JoinEventCard key="jec5" event={ events[0] } />
+            <JoinCommunityCard key="jcc3" community={ communities[1] } />
+            <LocalAlertCard key="lac4" alert={ alerts[0] } />
         </div>
     },
 
