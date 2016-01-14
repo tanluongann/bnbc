@@ -109,32 +109,96 @@ nav
         background-repeat: repeat
 
         .overviewpanel
-            height: 230px
+            height: 190px
             background: #372A6B
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
             padding: 20px
             color: white
             position: relative
+            font-size: 16px            
+
+            background: url(http://www.wallpaperup.com/uploads/wallpapers/2012/10/14/19261/big_thumb_cacb13ea4246ee699a7c926f83a9ce0c.jpg)
+            background-clip: inherit
+            background-size: initial
+            background-position-x: 500px
+            background-position-y: 230px
             
-            .locations
+            .pages
                 display: block
             
+                .page
+                    display: block
+
                 .location
                     display: block
                 
-                    span
+                    .label
                         display: block
-            
-            .user
-                display: block
-                color: rgba(255, 255, 255, 0.98)
-                position: absolute
-                bottom: 0
-                margin-bottom: 15px
+                        color: rgba(255, 255, 255, 0.5)
+                        width: 190px
+                        margin-bottom: 3px
+                        text-align: center
+
+                        .city
+                            color: white
+                    
+                    .time
+                        display: block
+                        width: 120px
+                        text-align: center
+                        font-size: 26px
+                        padding-left: 7px
     
-                .name
-                    display: block
-                    font-size: 35px
+                    .weather
+                        display: block
+                        position: relative
+                        padding-left: 7px
+
+                        .temperature
+                            display: block
+                            width: 120px
+                            text-align: center
+                            font-size: 26px
+
+                            .value
+                                color: rgba(255, 255, 255, 1)
+
+                            .unit
+                                color: rgba(255, 255, 255, 0.5)
+
+                        i
+                            color: rgba(255, 255, 255, 0.5)
+                            position: absolute
+                            top: -18px
+                            left: 110px
+                            font-size: 40px
+                    
+                    .exchange
+                        display: block
+                        color: rgba(255, 255, 255, 0.5)
+                        width: 190px
+                        text-align: center
+                        margin-top: 5px
+
+                        .rate
+                            display: inline
+    
+                            .value
+                                color: white
+    
+                            .currency
+                                color: rgba(255, 255, 255, 0.5)
+
+                .user
+                    display: none
+                    color: rgba(255, 255, 255, 0.98)
+                    position: absolute
+                    bottom: 0
+                    margin-bottom: 15px
+        
+                    .name
+                        display: block
+                    font-size: 22px
 
         .card
             // box-shadow: 0 0 2px rgba(0, 0, 0, 0.2)

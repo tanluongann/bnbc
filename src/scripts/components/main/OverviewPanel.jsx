@@ -54,21 +54,44 @@ var OverviewPanel = React.createClass({
         if (!this.state.mounted) classes.push('mounting');
         return <div className={ classes.join(" ") } >
 
-            <div className="locations">
-                <div className="location current">
-                    <span className="city">Paris</span>
-                    <span className="time">18:30</span>
-                    <span className="weather">Rainy</span>
-                </div>
-                <div className="location next">
-                    <span className="city">Paris</span>
-                    <span className="time">18:30</span>
-                    <span className="weather">Rainy</span>
-                </div>
-            </div>
+            <div className="pages">
 
-            <div className="user">
-                <span className="name">Jeremy Tan</span>
+                <div className="page location">
+                    <span className="label">
+                        <i className="fa fw fa-map-marker"></i>&nbsp;
+                        Currently in <span className="city">Shanghai</span></span>
+                    <span className="time">18:30</span>
+                    <span className="weather">
+                        <span className="temperature">
+                            <span className="value">21</span>
+                            <span className="unit">&deg;C</span>
+                        </span>
+                        <i className="wi wi-day-sunny"></i>
+                    </span>
+                    <span className="exchange">
+                        <i className="fa fw fa-line-chart"></i>&nbsp;
+                        <span className="rate provtodest">
+                            <span className="value">1</span>
+                            <span className="currency">€</span> 
+                            =
+                            <span className="value">7.15</span>
+                            <span className="currency">¥</span>
+                        </span>
+                        &nbsp;&bull;&nbsp;
+                        <span className="rate desttoprov">
+                            <span className="value">1</span>
+                            <span className="currency">¥</span>
+                            = 
+                            <span className="value">0.14</span>
+                            <span className="currency">€</span> 
+                        </span>
+                    </span>
+                </div>
+
+                <div className="page user">
+                    <span className="name">Jeremy Tan</span>
+                </div>
+    
             </div>
 
         </div>

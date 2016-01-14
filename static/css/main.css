@@ -101,32 +101,95 @@ nav a:hover {
   background-repeat: repeat;
 }
 .page .contentpanel .overviewpanel {
-  height: 230px;
+  height: 190px;
   background: #372A6B;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   padding: 20px;
   color: white;
   position: relative;
+  font-size: 16px;
+  background: url(http://www.wallpaperup.com/uploads/wallpapers/2012/10/14/19261/big_thumb_cacb13ea4246ee699a7c926f83a9ce0c.jpg);
+  background-clip: inherit;
+  background-size: initial;
+  background-position-x: 500px;
+  background-position-y: 230px;
 }
-.page .contentpanel .overviewpanel .locations {
+.page .contentpanel .overviewpanel .pages {
   display: block;
 }
-.page .contentpanel .overviewpanel .locations .location {
+.page .contentpanel .overviewpanel .pages .page {
   display: block;
 }
-.page .contentpanel .overviewpanel .locations .location span {
+.page .contentpanel .overviewpanel .pages .location {
   display: block;
 }
-.page .contentpanel .overviewpanel .user {
+.page .contentpanel .overviewpanel .pages .location .label {
   display: block;
+  color: rgba(255, 255, 255, 0.5);
+  width: 190px;
+  margin-bottom: 3px;
+  text-align: center;
+}
+.page .contentpanel .overviewpanel .pages .location .label .city {
+  color: white;
+}
+.page .contentpanel .overviewpanel .pages .location .time {
+  display: block;
+  width: 120px;
+  text-align: center;
+  font-size: 26px;
+  padding-left: 7px;
+}
+.page .contentpanel .overviewpanel .pages .location .weather {
+  display: block;
+  position: relative;
+  padding-left: 7px;
+}
+.page .contentpanel .overviewpanel .pages .location .weather .temperature {
+  display: block;
+  width: 120px;
+  text-align: center;
+  font-size: 26px;
+}
+.page .contentpanel .overviewpanel .pages .location .weather .temperature .value {
+  color: white;
+}
+.page .contentpanel .overviewpanel .pages .location .weather .temperature .unit {
+  color: rgba(255, 255, 255, 0.5);
+}
+.page .contentpanel .overviewpanel .pages .location .weather i {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: -18px;
+  left: 110px;
+  font-size: 40px;
+}
+.page .contentpanel .overviewpanel .pages .location .exchange {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  width: 190px;
+  text-align: center;
+  margin-top: 5px;
+}
+.page .contentpanel .overviewpanel .pages .location .exchange .rate {
+  display: inline;
+}
+.page .contentpanel .overviewpanel .pages .location .exchange .rate .value {
+  color: white;
+}
+.page .contentpanel .overviewpanel .pages .location .exchange .rate .currency {
+  color: rgba(255, 255, 255, 0.5);
+}
+.page .contentpanel .overviewpanel .pages .user {
+  display: none;
   color: rgba(255, 255, 255, 0.98);
   position: absolute;
   bottom: 0;
   margin-bottom: 15px;
+  font-size: 22px;
 }
-.page .contentpanel .overviewpanel .user .name {
+.page .contentpanel .overviewpanel .pages .user .name {
   display: block;
-  font-size: 35px;
 }
 .page .contentpanel .card {
   border: 1px solid rgba(0, 0, 0, 0.07);

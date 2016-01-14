@@ -58,12 +58,12 @@ var ContentPanel = React.createClass({
             {
                 "name": "The Maglev lovers",
                 "icon": "community-0.jpg",
-            },    
+            },
             {
                 "name": "Shanghai gastronomy",
                 "icon": "community-1.jpg",
-            },    
-        ]
+            },
+        ];
         
         var alerts = [
             {
@@ -78,7 +78,7 @@ var ContentPanel = React.createClass({
                 "name": "Hiking in Anji forest",
                 "date": "Friday Jan 12th",
                 "icon": "event-0.jpg",
-            }    
+            },
         ];
         
         var classes = ['contentpanel'];
@@ -88,8 +88,8 @@ var ContentPanel = React.createClass({
             <PrepareTripCard key="ptc1" booking={ bookings[0] } />
             <JoinCommunityCard key="jcc2" community={ communities[0] } />
             <JoinEventCard key="jec5" event={ events[0] } />
-            <JoinCommunityCard key="jcc3" community={ communities[1] } />
             <LocalAlertCard key="lac4" alert={ alerts[0] } />
+            <JoinCommunityCard key="jcc3" community={ communities[1] } />
         </div>
     },
 
