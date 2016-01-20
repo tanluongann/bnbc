@@ -29,13 +29,14 @@ var BookingCard = React.createClass({
             "background": "url(/static/img/alerts/"+this.props.alert.icon+")",
         }
         
-        return <article className={ classes.join(" ") } >
+        return <a href="#" className={ classes.join(" ") } >
             <span className="icon" style={ style } ></span>
             <span className="content">
+                <span className="intro"><i className="fa fw fa-exclamation-triangle"></i> Warning</span>
                 <span className="title">{ this.props.alert.title }</span>
                 <span className="date">{ this.props.alert.date }</span>
             </span>
-        </article>
+        </a>
     },
 
     changeType(e) {

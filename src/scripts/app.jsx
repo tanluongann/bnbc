@@ -41,17 +41,9 @@ var App = React.createClass({
             }
             if (this.state.appInfo.page in pages) pages[this.state.appInfo.page] = 'active'
 
-            var userBlock = null;
-            if (this.state.appInfo.loggedUser) {
-                userBlock = <InfoPanel loggedUser={ this.state.appInfo.loggedUser } />
-            }
-            else {
-                userBlock = <div className="infopanel">Not logged!!</div>
-            }
-            
             return (
                 <article className="page">
-                    { userBlock }
+                    <InfoPanel loggedUser={ this.state.appInfo.loggedUser } />
                     <ContentPanel />
                     <SocialPanel />
                 </article>

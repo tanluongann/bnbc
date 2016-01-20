@@ -28,13 +28,14 @@ var PrepareTripCard = React.createClass({
             "background": "url(/static/img/prepare.jpg)",
         }
         
-        return <article className={ classes.join(" ") } >
+        return <a href="#" className={ classes.join(" ") } >
             <span className="icon" style={ style } ></span>
             <span className="content">
-                <span className="title">Prepare trip to <em>{ this.props.booking.place.name }</em></span>
+                <span className="intro">Prepare Trip</span>
+                <span className="title">{ this.props.booking.place.name }</span>
                 <span className="date">{ this.props.booking.date }</span>
             </span>
-        </article>
+        </a>
     },
 
     changeType(e) {

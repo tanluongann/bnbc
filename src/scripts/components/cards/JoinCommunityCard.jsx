@@ -28,12 +28,14 @@ var JoinCommunityCard = React.createClass({
             "background": "url(/static/img/communities/"+this.props.community.icon+")",
         }
         
-        return <article className={ classes.join(" ") } >
+        return <a href="#" className={ classes.join(" ") } >
             <span className="icon" style={ style } ></span>
             <span className="content">
-                <span className="title">Join the community <em>{ this.props.community.name }</em></span>
+                <span className="intro">Join community</span>
+                <span className="title">{ this.props.community.name }</span>
+                <span className="details">23 members</span>
             </span>
-        </article>
+        </a>
     },
 
     changeType(e) {

@@ -58,9 +58,14 @@ var OverviewPanel = React.createClass({
 
                 <div className="page location">
                     <span className="label">
-                        <i className="fa fw fa-map-marker"></i>&nbsp;
-                        Currently in <span className="city">Shanghai</span></span>
+                        <span className="line">
+                            <i className="fa fw fa-home"></i>&nbsp;
+                            Staying at <span className="place">Mina's home</span>
+                        </span>
+                    </span>
+
                     <span className="time">18:30</span>
+
                     <span className="weather">
                         <span className="temperature">
                             <span className="value">21</span>
@@ -68,6 +73,7 @@ var OverviewPanel = React.createClass({
                         </span>
                         <i className="wi wi-day-sunny"></i>
                     </span>
+
                     <span className="exchange">
                         <i className="fa fw fa-line-chart"></i>&nbsp;
                         <span className="rate provtodest">
@@ -86,6 +92,15 @@ var OverviewPanel = React.createClass({
                             <span className="currency">€</span> 
                         </span>
                     </span>
+
+                    <span className="label">
+                        <span className="line">
+                            <i className="fa fw fa-phone"></i>&nbsp;
+                            Hosted by <a className="host" href="tel:+86 186 9133 7162">Mina</a>
+                        </span>
+                    </span>
+
+
                 </div>
 
                 <div className="page user">

@@ -28,13 +28,14 @@ var JoinEventCard = React.createClass({
             "background": "url(/static/img/events/"+this.props.event.icon+")",
         }
         
-        return <article className={ classes.join(" ") } >
+        return <a href="#" className={ classes.join(" ") } >
             <span className="icon" style={ style } ></span>
             <span className="content">
-                <span className="title">Join the event <em>{ this.props.event.name }</em></span>
+                <span className="intro">Join event</span>
+                <span className="title">{ this.props.event.name }</span>
                 <span className="date">{ this.props.event.date }</span>
             </span>
-        </article>
+        </a>
     },
 
     changeType(e) {
