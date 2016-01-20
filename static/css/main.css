@@ -92,8 +92,45 @@ nav a:hover {
 .page-container .page .infopanel .userpanel {
   width: 100%;
   position: relative;
-  background: rgba(142, 142, 142, 0.1);
-  height: 230px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.page-container .page .infopanel .userpanel .name {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+}
+.page-container .page .infopanel .userpanel .profile-picture {
+  border-radius: 300px;
+  display: block;
+  height: 80px;
+  width: 80px;
+  border: solid 10px rgba(255, 255, 255, 0.26);
+  margin: 10px auto;
+}
+.page-container .page .infopanel .userpanel .badges {
+  display: block;
+  color: transparent;
+}
+.page-container .page .infopanel .userpanel .infos {
+  display: block;
+  height: 75px;
+}
+.page-container .page .infopanel .userpanel .infos .traveltime, .page-container .page .infopanel .userpanel .infos .traveldistance {
+  display: block;
+  padding: 10px;
+}
+.page-container .page .infopanel .userpanel .infos .traveltime .label, .page-container .page .infopanel .userpanel .infos .traveldistance .label {
+  opacity: 0.5;
+  display: block;
+  line-height: 22px;
+  margin-top: 6px;
+  float: left;
+}
+.page-container .page .infopanel .userpanel .infos .traveltime .value, .page-container .page .infopanel .userpanel .infos .traveldistance .value {
+  font-size: 22px;
+  color: #8FBC2D;
+  float: right;
 }
 .page-container .page .contentpanel {
   min-height: 100%;
