@@ -25,6 +25,7 @@ var AppInfoSource = {
                 loggedUser: {
                     "name": "Jeremy",
                     "email": "jeremy@gmail.com",
+                    "picture": "tiao3.jpg",
                 }
             // });
             }

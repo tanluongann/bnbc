@@ -23,9 +23,10 @@ var UserPanel = React.createClass({
     render: function() {
         var classes = ['userpanel'];
         if (!this.state.mounted) classes.push('mounting');
+        var pictUrl = "/static/img/users/" + this.props.user.picture;
         return <div className={ classes.join(" ") } >
             <span className="name">{ this.props.user.name }</span>
-            <img className="profile-picture" href="/static/img/{ this.props.user.picture }" />
+            <img className="profile-picture" href={ pictUrl } />
             <span className="badges">{ this.props.user.name }</span>
             <span className="infos">
                 <span className="traveltime">

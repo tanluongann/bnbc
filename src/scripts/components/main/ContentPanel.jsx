@@ -84,7 +84,7 @@ var ContentPanel = React.createClass({
         var classes = ['contentpanel'];
         if (!this.state.mounted) classes.push('mounting');
         return <div className={ classes.join(" ") } >
-            <OverviewPanel key="op1" />
+            <OverviewPanel key="op1" app={ this.props.app } />
             <PrepareTripCard key="ptc1" booking={ bookings[0] } />
             <JoinCommunityCard key="jcc2" community={ communities[0] } />
             <JoinEventCard key="jec5" event={ events[0] } />

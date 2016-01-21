@@ -2,6 +2,8 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Swiper = require('react-swipeable');
+
 React.allComponents = {}
 // Components
 var InfoPanel = require('./components/main/InfoPanel');
@@ -40,17 +42,45 @@ var App = React.createClass({
                 "mnb0": 'inactive',
             }
             if (this.state.appInfo.page in pages) pages[this.state.appInfo.page] = 'active'
+            
+            var cls = ['page'];
+            if (this.state.slided == "leftslided") cls.push("leftslided");
+            if (this.state.slided == "rightslided") cls.push("rightslided");
 
             return (
-                <article className="page">
+                <article className={ cls.join(' ') }>
                     <InfoPanel loggedUser={ this.state.appInfo.loggedUser } />
-                    <ContentPanel />
+                    <Swiper onSwipedRight={ this.handleRightSwipe } onSwipedLeft={ this.handleLeftSwipe }> 
+                        <ContentPanel app={ this } />
+                    </Swiper>
                     <SocialPanel />
                 </article>
             );
         }
         else {
             return (<div>App not loaded</div>)
+        }
+    },
+    
+    handleRightSwipe: function(toggle) {
+        if (toggle) {
+            if (this.state.slided == "leftslided") this.setState({"slided": ""});
+            else this.setState({"slided": "leftslided"});
+        }
+        else {
+            if (this.state.slided == "rightslided") this.setState({"slided": ""});
+            else this.setState({"slided": "leftslided"});
+        }
+    },
+
+    handleLeftSwipe: function(toggle) {
+        if (toggle) {
+            if (this.state.slided == "rightslided") this.setState({"slided": ""});
+            else this.setState({"slided": "rightslided"});
+        }
+        else {
+            if (this.state.slided == "leftslided") this.setState({"slided": ""});
+            else this.setState({"slided": "rightslided"});
         }
     }
 

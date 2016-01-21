@@ -82,6 +82,22 @@ nav
     background: #4E4E4E
     height: 100%
 
+    .page.leftslided
+
+        .infopanel
+            opacity: 1        
+
+        .contentpanel
+            left: 70%
+
+    .page.rightslided
+
+        .socialpanel
+            opacity: 1        
+
+        .contentpanel
+            left: -70%
+
     .page
         position: relative
         min-height: 100%
@@ -90,11 +106,13 @@ nav
 
         .infopanel
             min-height: 100%
-            width: 50%
+            width: 70%
             position: absolute
             top: 0
             left: 0
-    
+            opacity: 0
+            transition: all 0.3s ease-in-out
+
             .userpanel
                 width: 100%
                 position: relative
@@ -137,17 +155,29 @@ nav
                             font-size: 22px
                             color: #8FBC2D
                             float: right
+                            
+            .menupanel
+                width: 100%
+                
+                li
+                    padding: 10px
+            
+
+        .contentpanel.slidedRight
+            left: -70%
 
         .contentpanel
             min-height: 100%
             width: 100%
             position: absolute
             top: 0
-            left: 50%
+            left: 0
             background: #F8F8F8
             background-attachment: fixed
             background-repeat: repeat
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+            transition: all 0.5s ease-in-out
+            z-index: 55
     
             .overviewpanel
                 height: 190px
@@ -169,7 +199,15 @@ nav
     
                     .page
                         display: block
-    
+                    
+                    .buttons
+                        position: absolute
+                        z-index: 33
+
+                        a
+                            color: rgba(255, 255, 255, 0.5)
+                            text-decoration: none
+
                     .location
                         display: block
                     
@@ -323,12 +361,13 @@ nav
     
     
         .socialpanel
-            display: none
+            opacity: 0
             height: 100%
-            width: 75%
+            width: 70%
             position: absolute
             top: 0
-            // left: 175%
+            left: 30%
             background: rgba(155, 25, 125, 1)
+            z-index: 10
             
             

@@ -33,7 +33,7 @@ var InfoPanel = React.createClass({
         </div>
     },
 
-    changeType(e) {
+    changeType: function(e) {
         this.setState({ type: e });
     },
 

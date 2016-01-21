@@ -56,6 +56,10 @@ var OverviewPanel = React.createClass({
 
             <div className="pages">
 
+                <span className="buttons">
+                    <a href="#" className="infoPanelButton" onClick={ this.infoPanelButtonClick }><i className="fa fw fa-list"></i></a>
+                </span>
+
                 <div className="page location">
                     <span className="label">
                         <span className="line">
@@ -111,8 +115,12 @@ var OverviewPanel = React.createClass({
 
         </div>
     },
+    
+    infoPanelButtonClick: function() {
+        this.props.app.handleRightSwipe(true);
+    },
 
-    changeType(e) {
+    changeType: function(e) {
         this.setState({ type: e });
     },
 

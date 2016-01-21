@@ -76,6 +76,18 @@ nav a:hover {
   background: #4E4E4E;
   height: 100%;
 }
+.page-container .page.leftslided .infopanel {
+  opacity: 1;
+}
+.page-container .page.leftslided .contentpanel {
+  left: 70%;
+}
+.page-container .page.rightslided .socialpanel {
+  opacity: 1;
+}
+.page-container .page.rightslided .contentpanel {
+  left: -70%;
+}
 .page-container .page {
   position: relative;
   min-height: 100%;
@@ -84,10 +96,12 @@ nav a:hover {
 }
 .page-container .page .infopanel {
   min-height: 100%;
-  width: 50%;
+  width: 70%;
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 .page-container .page .infopanel .userpanel {
   width: 100%;
@@ -132,16 +146,27 @@ nav a:hover {
   color: #8FBC2D;
   float: right;
 }
+.page-container .page .infopanel .menupanel {
+  width: 100%;
+}
+.page-container .page .infopanel .menupanel li {
+  padding: 10px;
+}
+.page-container .page .contentpanel.slidedRight {
+  left: -70%;
+}
 .page-container .page .contentpanel {
   min-height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   background: #F8F8F8;
   background-attachment: fixed;
   background-repeat: repeat;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in-out;
+  z-index: 55;
 }
 .page-container .page .contentpanel .overviewpanel {
   height: 190px;
@@ -162,6 +187,14 @@ nav a:hover {
 }
 .page-container .page .contentpanel .overviewpanel .pages .page {
   display: block;
+}
+.page-container .page .contentpanel .overviewpanel .pages .buttons {
+  position: absolute;
+  z-index: 33;
+}
+.page-container .page .contentpanel .overviewpanel .pages .buttons a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 .page-container .page .contentpanel .overviewpanel .pages .location {
   display: block;
@@ -304,10 +337,12 @@ nav a:hover {
   color: white;
 }
 .page-container .page .socialpanel {
-  display: none;
+  opacity: 0;
   height: 100%;
-  width: 75%;
+  width: 70%;
   position: absolute;
   top: 0;
+  left: 30%;
   background: #9b197d;
+  z-index: 10;
 }
