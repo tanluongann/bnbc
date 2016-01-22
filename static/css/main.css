@@ -82,12 +82,6 @@ nav a:hover {
 .page-container .page.leftslided .contentpanel {
   left: 85%;
 }
-.page-container .page.rightslided .socialpanel {
-  opacity: 1;
-}
-.page-container .page.rightslided .contentpanel {
-  left: -85%;
-}
 .page-container .page {
   position: relative;
   min-height: 100%;
@@ -113,6 +107,7 @@ nav a:hover {
   text-align: center;
   padding: 10px;
   font-size: 22px;
+  color: white;
 }
 .page-container .page .infopanel .userpanel .profile-picture {
   border-radius: 300px;
@@ -174,6 +169,18 @@ nav a:hover {
   width: 40px;
   text-align: center;
   opacity: 0.5;
+}
+.page-container .page .infopanel .menupanel li .badgenew {
+  display: block;
+  float: right;
+  padding: 0px 5px;
+  /* margin: -3px */
+  border: solid 3px #CC2929;
+  border-radius: 8px;
+  text-align: center;
+  background: #CC2929;
+  color: white;
+  font-size: 12px;
 }
 .page-container .page .contentpanel.slidedRight {
   left: -85%;
@@ -358,6 +365,81 @@ nav a:hover {
 }
 .page-container .page .contentpanel .card.alert .title {
   color: white;
+}
+.page-container .page .contentpanel .bookingpanel .placeheaderpanel {
+  height: 190px;
+  background: #372A6B;
+  padding: 20px;
+  color: white;
+  position: relative;
+  font-size: 16px;
+  background: #B3284E;
+  background-clip: inherit;
+  background-position-x: center;
+  background-position-y: center;
+}
+.page-container .page .contentpanel .bookingpanel .placeheaderpanel .buttons {
+  position: absolute;
+  z-index: 33;
+}
+.page-container .page .contentpanel .bookingpanel .placeheaderpanel .buttons a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+.page-container .page .contentpanel .bookingpanel h2 {
+  padding: 15px;
+  color: #565656;
+}
+.page-container .page .contentpanel .bookingpanel .dates {
+  height: 70px;
+}
+.page-container .page .contentpanel .bookingpanel .dates .from, .page-container .page .contentpanel .bookingpanel .dates .to {
+  display: block;
+  width: 50px;
+  background: #464646;
+  text-align: center;
+  margin: 0 15px;
+  color: white;
+}
+.page-container .page .contentpanel .bookingpanel .dates .from .day, .page-container .page .contentpanel .bookingpanel .dates .to .day {
+  display: block;
+  background: #E2E2E2;
+  color: black;
+  font-size: 28px;
+  padding: 3px 0;
+}
+.page-container .page .contentpanel .bookingpanel .dates .from .month, .page-container .page .contentpanel .bookingpanel .dates .to .month {
+  display: block;
+  padding: 3px 0;
+  border-top: 3px solid transparent;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.page-container .page .contentpanel .bookingpanel .dates .from {
+  float: left;
+}
+.page-container .page .contentpanel .bookingpanel .dates .to {
+  float: right;
+}
+.page-container .page .contentpanel .bookingpanel .fields {
+  clear: both;
+}
+.page-container .page .contentpanel .bookingpanel .fields .field {
+  color: #737373;
+  padding: 15px;
+  margin-top: 15px;
+  display: block;
+  border-top: solid 1px #E6E6E6;
+}
+.page-container .page .contentpanel .bookingpanel .fields .field i {
+  font-size: 25px;
+  float: left;
+  display: block;
+}
+.page-container .page .contentpanel .bookingpanel .fields .field .content {
+  color: #737373;
+  display: block;
+  margin-left: 40px;
 }
 .page-container .page .socialpanel {
   opacity: 0;

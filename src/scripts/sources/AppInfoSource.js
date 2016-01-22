@@ -21,7 +21,11 @@ var AppInfoSource = {
 
             // var appInfo = AppInfoActions.updateAppInfo({
             var appInfo = {
-                page: 'iil0',
+                page: {
+                    "name": "home",
+                    "model": { },
+
+                },
                 loggedUser: {
                     "name": "Jeremy",
                     "email": "jeremy@gmail.com",

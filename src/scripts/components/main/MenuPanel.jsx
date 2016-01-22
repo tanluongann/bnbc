@@ -29,6 +29,7 @@ var MenuPanel = React.createClass({
             <li><i className="fa fw fa-bookmark"></i>My Bookings</li>
             <li><i className="fa fw fa-calendar"></i>My Events</li>
             <li><i className="fa fw fa-history"></i>History</li>
+            <li><i className="fa fw fa-users"></i>Communities <span className="badgenew">4</span></li>
         </ul>
     },
 

@@ -4,6 +4,8 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Swiper = require('react-swipeable');
 
+var _ = require('lodash');
+
 React.allComponents = {}
 // Components
 var InfoPanel = require('./components/main/InfoPanel');
@@ -42,7 +44,7 @@ var App = React.createClass({
                 "mnb0": 'inactive',
             }
             if (this.state.appInfo.page in pages) pages[this.state.appInfo.page] = 'active'
-            
+
             var cls = ['page'];
             if (this.state.slided == "leftslided") cls.push("leftslided");
             if (this.state.slided == "rightslided") cls.push("rightslided");
@@ -50,7 +52,7 @@ var App = React.createClass({
             return (
                 <article className={ cls.join(' ') }>
                     <InfoPanel loggedUser={ this.state.appInfo.loggedUser } />
-                    <Swiper onSwipedRight={ this.handleRightSwipe } onSwipedLeft={ this.handleLeftSwipe }> 
+                    <Swiper onSwipedRight={ this.handleRightSwipe } onSwipedLeft={ this.handleLeftSwipe }>
                         <ContentPanel app={ this } />
                     </Swiper>
                     <SocialPanel />
@@ -61,30 +63,37 @@ var App = React.createClass({
             return (<div>App not loaded</div>)
         }
     },
-    
+
     handleRightSwipe: function(toggle) {
         if (toggle) {
             if (this.state.slided == "leftslided") this.setState({"slided": ""});
             else this.setState({"slided": "leftslided"});
         }
         else {
-            alert("left");
-            if (this.state.slided == "rightslided") this.setState({"slided": ""});
-            else this.setState({"slided": "leftslided"});
+            // if (this.state.slided == "rightslided") this.setState({"slided": ""});
+            // else this.setState({"slided": "leftslided"});
+            this.setState({"slided": "leftslided"});
         }
     },
 
     handleLeftSwipe: function(toggle) {
-        if (toggle) {
-            if (this.state.slided == "rightslided") this.setState({"slided": ""});
-            else this.setState({"slided": "rightslided"});
-        }
-        else {
-            alert("right");
-            if (this.state.slided == "leftslided") this.setState({"slided": ""});
-            else this.setState({"slided": "rightslided"});
-        }
-    }
+        // if (toggle) {
+        //     if (this.state.slided == "rightslided") this.setState({"slided": ""});
+        //     else this.setState({"slided": "rightslided"});
+        // }
+        // else {
+            // if (this.state.slided == "leftslided") this.setState({"slided": ""});
+            // else this.setState({"slided": "rightslided"});
+            this.setState({"slided": ""});
+        // }
+    },
+
+    goToPage: function(page, model) {
+        var appInfo = _.extend({}, this.state.appInfo);
+        appInfo.page.name = page;
+        appInfo.page.model = model;
+        this.setState({"appInfo": appInfo });
+    },
 
 });
 

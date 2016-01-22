@@ -5,6 +5,7 @@ var _ = require('lodash');
 var d = require('datejs');
 
 var OverviewPanel = require('./OverviewPanel');
+var BookingPanel = require('./BookingPanel');
 
 var PrepareTripCard = require('../cards/PrepareTripCard');
 var JoinCommunityCard = require('../cards/JoinCommunityCard');
@@ -28,16 +29,19 @@ var ContentPanel = React.createClass({
     },
 
     render: function() {
-        
+
         var bookings = [
             {
                 "date": "Tomorrow",
                 "place": {
                     "name": "Longyang guangchang",
-                    "address": "1088 Longyang Road, blabla",
+                    "address": {
+                        "english": "Shanghai city, Pudong new area, 1880 Longyang road, Bdg 44, Apt 230",
+                        "local": "上海市 浦东新区, 龙阳路1880弄 44号 230室",
+                    },
                     "city": "Shanghai",
                     "country": "China",
-                    "photo": 1,
+                    "picture": "1.jpg",
                 },
                 "duration": 3,
             },
@@ -45,15 +49,18 @@ var ContentPanel = React.createClass({
                 "date": "Next Thursday",
                 "place": {
                     "name": "Parimonami",
-                    "address": "37 rue du bourg, blabla",
+                    "address": {
+                        "english": "Paris city, District 13, 32 park street",
+                        "local": "Paris, 13eme arrondissement, 32 rue du parc",
+                    },
                     "city": "Paris",
                     "country": "France",
-                    "photo": 2,
+                    "picture": "2.jpg",
                 },
                 "duration": 7,
             },
         ];
-        
+
         var communities = [
             {
                 "name": "The Maglev lovers",
@@ -64,7 +71,7 @@ var ContentPanel = React.createClass({
                 "icon": "community-1.jpg",
             },
         ];
-        
+
         var alerts = [
             {
                 "title": "Hurricane alert in Shanghai",
@@ -72,7 +79,7 @@ var ContentPanel = React.createClass({
                 "icon": "alert-0.jpg",
             },
         ];
-        
+
         var events = [
             {
                 "name": "Hiking in Anji forest",
@@ -80,17 +87,30 @@ var ContentPanel = React.createClass({
                 "icon": "event-0.jpg",
             },
         ];
-        
+
+        var page = {"name": "home", "model": {}};
+        if (this.props.app.state.appInfo.page) page = this.props.app.state.appInfo.page;
         var classes = ['contentpanel'];
         if (!this.state.mounted) classes.push('mounting');
-        return <div className={ classes.join(" ") } >
-            <OverviewPanel key="op1" app={ this.props.app } />
-            <PrepareTripCard key="ptc1" booking={ bookings[0] } />
-            <JoinCommunityCard key="jcc2" community={ communities[0] } />
-            <JoinEventCard key="jec5" event={ events[0] } />
-            <LocalAlertCard key="lac4" alert={ alerts[0] } />
-            <JoinCommunityCard key="jcc3" community={ communities[1] } />
-        </div>
+
+        var el = <div className={ classes.join(" ") } >No page { page.name }</div>;
+        if (page.name == 'home') {
+            el = <div className={ classes.join(" ") } >
+                <OverviewPanel key="op1" app={ this.props.app } />
+                <PrepareTripCard key="ptc1" app={ this.props.app } booking={ bookings[0] } />
+                <JoinCommunityCard key="jcc2" community={ communities[0] } />
+                <JoinEventCard key="jec5" event={ events[0] } />
+                <LocalAlertCard key="lac4" alert={ alerts[0] } />
+                <JoinCommunityCard key="jcc3" community={ communities[1] } />
+            </div>
+        }
+        else if (page.name == 'booking') {
+            el = <div className={ classes.join(" ") } >
+                <BookingPanel key="bkp1" app={ this.props.app } booking={ page.model } />
+            </div>
+        }
+
+        return el;
     },
 
     changeType(e) {

@@ -4,7 +4,7 @@ var React = require('react');
 var _ = require('lodash');
 var d = require('datejs');
 
-var JoinEventCard = React.createClass({
+var CommunityExplorationCard = React.createClass({
 
     getInitialState: function() {
         return {
@@ -25,15 +25,14 @@ var JoinEventCard = React.createClass({
         if (!this.state.mounted) classes.push('mounting');
 
         var style = {
-            "background": "url(/static/img/events/"+this.props.event.icon+")",
+            "background": "url(/static/img/communities.jpg)",
         }
 
         return <a href="#" className={ classes.join(" ") } >
             <span className="icon" style={ style } ></span>
             <span className="content">
-                <span className="intro">Join event</span>
-                <span className="title">{ this.props.event.name }</span>
-                <span className="date">{ this.props.event.date }</span>
+                <span className="intro">Join communities</span>
+                <span className="title">Explore and join communities that you like</span>
             </span>
         </a>
     },
@@ -44,5 +43,5 @@ var JoinEventCard = React.createClass({
 
 });
 
-React.allComponents['JoinEventCard'] = JoinEventCard;
-module.exports = JoinEventCard;
+React.allComponents['CommunityExplorationCard'] = CommunityExplorationCard;
+module.exports = CommunityExplorationCard;

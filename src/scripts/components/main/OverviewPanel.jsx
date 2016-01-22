@@ -24,7 +24,7 @@ var OverviewPanel = React.createClass({
     },
 
     render: function() {
-        
+
         var userInfo = {
             "current":  {
                 "date": 151232134,
@@ -49,7 +49,7 @@ var OverviewPanel = React.createClass({
                 "duration": 7,
             }
         };
-        
+
         var classes = ['overviewpanel'];
         if (!this.state.mounted) classes.push('mounting');
         return <div className={ classes.join(" ") } >
@@ -82,7 +82,7 @@ var OverviewPanel = React.createClass({
                         <i className="fa fw fa-line-chart"></i>&nbsp;
                         <span className="rate provtodest">
                             <span className="value">1</span>
-                            <span className="currency">€</span> 
+                            <span className="currency">€</span>
                             =
                             <span className="value">7.15</span>
                             <span className="currency">¥</span>
@@ -91,9 +91,9 @@ var OverviewPanel = React.createClass({
                         <span className="rate desttoprov">
                             <span className="value">1</span>
                             <span className="currency">¥</span>
-                            = 
+                            =
                             <span className="value">0.14</span>
-                            <span className="currency">€</span> 
+                            <span className="currency">€</span>
                         </span>
                     </span>
 
@@ -110,12 +110,12 @@ var OverviewPanel = React.createClass({
                 <div className="page user">
                     <span className="name">Jeremy Tan</span>
                 </div>
-    
+
             </div>
 
         </div>
     },
-    
+
     infoPanelButtonClick: function() {
         this.props.app.handleRightSwipe(true);
     },

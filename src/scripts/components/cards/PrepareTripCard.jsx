@@ -23,12 +23,12 @@ var PrepareTripCard = React.createClass({
     render: function() {
         var classes = ['card', 'prepare-trip'];
         if (!this.state.mounted) classes.push('mounting');
-        
+
         var style = {
             "background": "url(/static/img/prepare.jpg)",
         }
-        
-        return <a href="#" className={ classes.join(" ") } >
+
+        return <a href="#" onClick={ this.handleClick } className={ classes.join(" ") } >
             <span className="icon" style={ style } ></span>
             <span className="content">
                 <span className="intro">Prepare Trip</span>
@@ -38,7 +38,11 @@ var PrepareTripCard = React.createClass({
         </a>
     },
 
-    changeType(e) {
+    handleClick: function() {
+        this.props.app.goToPage('booking', this.props.booking);
+    },
+
+    changeType: function(e) {
         this.setState({ type: e });
     },
 
