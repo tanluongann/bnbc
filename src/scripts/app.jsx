@@ -68,6 +68,7 @@ var App = React.createClass({
             else this.setState({"slided": "leftslided"});
         }
         else {
+            alert("left");
             if (this.state.slided == "rightslided") this.setState({"slided": ""});
             else this.setState({"slided": "leftslided"});
         }
@@ -79,6 +80,7 @@ var App = React.createClass({
             else this.setState({"slided": "rightslided"});
         }
         else {
+            alert("right");
             if (this.state.slided == "leftslided") this.setState({"slided": ""});
             else this.setState({"slided": "rightslided"});
         }

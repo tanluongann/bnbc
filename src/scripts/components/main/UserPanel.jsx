@@ -26,16 +26,16 @@ var UserPanel = React.createClass({
         var pictUrl = "/static/img/users/" + this.props.user.picture;
         return <div className={ classes.join(" ") } >
             <span className="name">{ this.props.user.name }</span>
-            <img className="profile-picture" href={ pictUrl } />
+            <img className="profile-picture" src={ pictUrl } />
             <span className="badges">{ this.props.user.name }</span>
             <span className="infos">
-                <span className="traveltime">
-                    <span className="label">Travel time: </span>
-                    <span className="value">589 days</span>
+                <span className="block traveltime">
+                    <i className="fa fw fa-calendar-plus-o" ></i>
+                    <span className="value">1,589</span> <span className="unit">days</span>
                 </span>
-                <span className="traveldistance">
-                    <span className="label">Travel distance: </span>
-                    <span className="value">65456 km</span>
+                <span className="block traveldistance">
+                    <i className="fa fw fa-map" ></i>
+                    <span className="value">65,456</span> <span className="unit">km</span>
                 </span>
             </span>
         </div>

@@ -88,7 +88,7 @@ nav
             opacity: 1        
 
         .contentpanel
-            left: 70%
+            left: 85%
 
     .page.rightslided
 
@@ -96,7 +96,7 @@ nav
             opacity: 1        
 
         .contentpanel
-            left: -70%
+            left: -85%
 
     .page
         position: relative
@@ -106,7 +106,7 @@ nav
 
         .infopanel
             min-height: 100%
-            width: 70%
+            width: 85%
             position: absolute
             top: 0
             left: 0
@@ -129,8 +129,9 @@ nav
                     display: block
                     height: 80px
                     width: 80px
-                    border: solid 10px rgba(255, 255, 255, 0.26)
-                    margin: 10px auto
+                    border: solid 10px rgba(184, 184, 184, 0.20)
+                    margin: 10px
+                    margin-left: calc(50% - 50px)
                 
                 .badges
                     display: block
@@ -140,31 +141,51 @@ nav
                     display: block
                     height: 75px
                     
-                    .traveltime, .traveldistance
+                    .block
                         display: block
                         padding: 10px
+                        clear: both
+                        width: calc(50% - 50px)
+                        text-align: center
+                        position: absolute
+                        top: 65px
                     
-                        .label
-                            opacity: 0.5
+                        i
                             display: block
-                            line-height: 22px
-                            margin-top: 6px
-                            float: left
+                            opacity: 0.3
+                            color: rgba(255, 255, 255, 0.3)
+                            padding-bottom: 5px
 
                         .value
                             font-size: 22px
                             color: #8FBC2D
-                            float: right
+                            display: block
+
+                        .unit
+                            display: block
+                            color: rgba(255, 255, 255, 0.3)
+                            
+                    .traveldistance
+                        left: calc(50% + 50px)
+                    .traveltime
+                        right: calc(50% + 50px)
                             
             .menupanel
                 width: 100%
+                list-style: none
                 
                 li
-                    padding: 10px
-            
+                    padding: 15px
+                    border-bottom: 1px solid #464646
+                    
+                    i
+                        display: inline-block
+                        width: 40px
+                        text-align: center
+                        opacity: 0.5
 
         .contentpanel.slidedRight
-            left: -70%
+            left: -85%
 
         .contentpanel
             min-height: 100%
@@ -363,10 +384,10 @@ nav
         .socialpanel
             opacity: 0
             height: 100%
-            width: 70%
+            width: 90%
             position: absolute
             top: 0
-            left: 30%
+            left: 10%
             background: rgba(155, 25, 125, 1)
             z-index: 10
             

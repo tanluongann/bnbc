@@ -80,13 +80,13 @@ nav a:hover {
   opacity: 1;
 }
 .page-container .page.leftslided .contentpanel {
-  left: 70%;
+  left: 85%;
 }
 .page-container .page.rightslided .socialpanel {
   opacity: 1;
 }
 .page-container .page.rightslided .contentpanel {
-  left: -70%;
+  left: -85%;
 }
 .page-container .page {
   position: relative;
@@ -96,7 +96,7 @@ nav a:hover {
 }
 .page-container .page .infopanel {
   min-height: 100%;
-  width: 70%;
+  width: 85%;
   position: absolute;
   top: 0;
   left: 0;
@@ -119,8 +119,9 @@ nav a:hover {
   display: block;
   height: 80px;
   width: 80px;
-  border: solid 10px rgba(255, 255, 255, 0.26);
-  margin: 10px auto;
+  border: solid 10px rgba(184, 184, 184, 0.2);
+  margin: 10px;
+  margin-left: calc(50% - 50px);
 }
 .page-container .page .infopanel .userpanel .badges {
   display: block;
@@ -130,30 +131,52 @@ nav a:hover {
   display: block;
   height: 75px;
 }
-.page-container .page .infopanel .userpanel .infos .traveltime, .page-container .page .infopanel .userpanel .infos .traveldistance {
+.page-container .page .infopanel .userpanel .infos .block {
   display: block;
   padding: 10px;
+  clear: both;
+  width: calc(50% - 50px);
+  text-align: center;
+  position: absolute;
+  top: 65px;
 }
-.page-container .page .infopanel .userpanel .infos .traveltime .label, .page-container .page .infopanel .userpanel .infos .traveldistance .label {
-  opacity: 0.5;
+.page-container .page .infopanel .userpanel .infos .block i {
   display: block;
-  line-height: 22px;
-  margin-top: 6px;
-  float: left;
+  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
 }
-.page-container .page .infopanel .userpanel .infos .traveltime .value, .page-container .page .infopanel .userpanel .infos .traveldistance .value {
+.page-container .page .infopanel .userpanel .infos .block .value {
   font-size: 22px;
   color: #8FBC2D;
-  float: right;
+  display: block;
+}
+.page-container .page .infopanel .userpanel .infos .block .unit {
+  display: block;
+  color: rgba(255, 255, 255, 0.3);
+}
+.page-container .page .infopanel .userpanel .infos .traveldistance {
+  left: calc(50% + 50px);
+}
+.page-container .page .infopanel .userpanel .infos .traveltime {
+  right: calc(50% + 50px);
 }
 .page-container .page .infopanel .menupanel {
   width: 100%;
+  list-style: none;
 }
 .page-container .page .infopanel .menupanel li {
-  padding: 10px;
+  padding: 15px;
+  border-bottom: 1px solid #464646;
+}
+.page-container .page .infopanel .menupanel li i {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  opacity: 0.5;
 }
 .page-container .page .contentpanel.slidedRight {
-  left: -70%;
+  left: -85%;
 }
 .page-container .page .contentpanel {
   min-height: 100%;
@@ -339,10 +362,10 @@ nav a:hover {
 .page-container .page .socialpanel {
   opacity: 0;
   height: 100%;
-  width: 70%;
+  width: 90%;
   position: absolute;
   top: 0;
-  left: 30%;
+  left: 10%;
   background: #9b197d;
   z-index: 10;
 }

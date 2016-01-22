@@ -24,10 +24,11 @@ var MenuPanel = React.createClass({
         var classes = ['menupanel'];
         if (!this.state.mounted) classes.push('mounting');
         return <ul className={ classes.join(" ") } >
-            <li>Plop</li>
-            <li>Plop</li>
-            <li>Plop</li>
-            <li>Plop</li>
+            <li><i className="fa fw fa-home"></i>Book a place</li>
+            <li><i className="fa fw fa-user"></i>My profile</li>
+            <li><i className="fa fw fa-bookmark"></i>My Bookings</li>
+            <li><i className="fa fw fa-calendar"></i>My Events</li>
+            <li><i className="fa fw fa-history"></i>History</li>
         </ul>
     },
 
